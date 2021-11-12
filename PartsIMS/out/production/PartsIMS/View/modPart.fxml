@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="modPart" prefHeight="403.0" prefWidth="658.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.modPartController">
+<children>
+    <RadioButton fx:id="inHouseRadio" layoutX="187.0" layoutY="42.0" mnemonicParsing="false" onAction="#onSourceRadio" text="In-House">
+        <toggleGroup>
+            <ToggleGroup fx:id="tGroupSource" />
+        </toggleGroup></RadioButton>
+    <RadioButton fx:id="outSourcedRadio" layoutX="329.0" layoutY="42.0" mnemonicParsing="false" onAction="#onSourceRadio" text="Outsourced" toggleGroup="$tGroupSource" />
+    <Label layoutX="58.0" layoutY="42.0" text="Modify Part">
+        <font>
+            <Font name="System Bold" size="12.0" />
+        </font></Label>
+    <TextField fx:id="textId" layoutX="148.0" layoutY="86.0" />
+    <Label layoutX="58.0" layoutY="90.0" text="ID" />
+    <TextField fx:id="textName" layoutX="148.0" layoutY="127.0" />
+    <Label layoutX="58.0" layoutY="131.0" text="Name" />
+    <TextField fx:id="textInv" layoutX="148.0" layoutY="167.0" />
+    <Label layoutX="58.0" layoutY="171.0" text="Inv" />
+    <TextField fx:id="textPrice" layoutX="148.0" layoutY="207.0" />
+    <Label layoutX="58.0" layoutY="211.0" text="Price/Cost" />
+    <TextField fx:id="textMin" layoutX="148.0" layoutY="246.0" />
+    <Label layoutX="58.0" layoutY="250.0" text="Min" />
+    <TextField fx:id="textMax" layoutX="362.0" layoutY="246.0" />
+    <Label layoutX="319.0" layoutY="250.0" text="Max" />
+    <Label fx:id="labelMulti" layoutX="58.0" layoutY="291.0" text="Machine ID" />
+    <TextField fx:id="textMulti" layoutX="148.0" layoutY="287.0" />
+    <Button fx:id="buttonMod" layoutX="416.0" layoutY="356.0" mnemonicParsing="false" onAction="#onModPart" text="Modify" />
+    <Button fx:id="buttonCancel" layoutX="491.0" layoutY="356.0" mnemonicParsing="false" onAction="#onButtonCancel" text="Cancel" />
+</children>
+        </AnchorPane>
