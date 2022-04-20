@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2F4F4F" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.reportScreen">
+    <children>
+        <TabPane layoutX="11.0" layoutY="78.0" prefHeight="395.0" prefWidth="878.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab fx:id="customerApptTab" onSelectionChanged="#totalCustomerApptReport" text="Total Customer Appointments">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="878.0">
+                            <children>
+                                <TableView fx:id="customerApptTypeTable" layoutX="14.0" layoutY="23.0" prefHeight="320.0" prefWidth="375.0">
+                                    <columns>
+                                        <TableColumn fx:id="customerApptTypeCol" prefWidth="161.0" text="Appointment Type" />
+                                        <TableColumn fx:id="customerApptTotalTypeCol" prefWidth="115.0" text="Total" />
+                                    </columns>
+                                </TableView>
+                                <TableView fx:id="customerApptMonthTable" layoutX="439.0" layoutY="24.0" prefHeight="319.0" prefWidth="385.0">
+                                    <columns>
+                                        <TableColumn fx:id="customerApptMonthCol" prefWidth="181.0" text="Appointment Month" />
+                                        <TableColumn fx:id="customerApptTotalMonthCol" prefWidth="81.0" text="Total" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="contactApptTab" onSelectionChanged="#appointmentsPerContact" text="Appointment per Contact Report">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView fx:id="contactApptTable" layoutY="41.0" prefHeight="324.0" prefWidth="878.0">
+                                    <columns>
+                                        <TableColumn fx:id="contactApptIDCol" prefWidth="97.0" text="Appointment ID" />
+                                        <TableColumn fx:id="contactApptTitleCol" prefWidth="185.0" text="Appointment Title" />
+                                        <TableColumn fx:id="contactApptTypeCol" prefWidth="115.0" text="Appointment Type" />
+                                        <TableColumn fx:id="contactApptDescripCol" prefWidth="160.0" text="Appointment Description" />
+                                        <TableColumn fx:id="contactApptStartCol" prefWidth="119.0" text="Start Date and Time" />
+                                        <TableColumn fx:id="contactApptEndCol" prefWidth="111.0" text="End Date and Time" />
+                                        <TableColumn fx:id="contactApptCustomerIDCol" prefWidth="76.0" text="Customer ID" />
+                                    </columns>
+                                </TableView>
+                                <ComboBox fx:id="contactComboBox" focusTraversable="false" layoutX="504.0" layoutY="8.0" onAction="#getAppointmentsPerContact" prefWidth="150.0" promptText="select contact" />
+                                <Label fx:id="contactLabel" layoutX="116.0" layoutY="7.0" prefHeight="27.0" prefWidth="388.0" text="Please select contact from dop down menu :" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="countriesFirstLevelDivisionTab" onSelectionChanged="#countriesReport" text="FLD Countries Report">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView fx:id="countriesFirstLevelDivisionTable" layoutX="-2.0" prefHeight="333.0" prefWidth="878.0">
+                                    <columns>
+                                        <TableColumn fx:id="firstLevelDivisionCol" prefWidth="469.0" text="First-Level Division" />
+                                        <TableColumn fx:id="countriesCol" prefWidth="408.0" text="Countries" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <Button fx:id="customersButton" layoutX="100.0" layoutY="24.0" mnemonicParsing="false" onAction="#openCustomerINFO" style="-fx-background-color: #F08080;" text="Customers" textFill="WHITE" wrapText="true">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+            <effect>
+                <InnerShadow />
+            </effect></Button>
+        <Button fx:id="appointmentsButton" layoutX="415.0" layoutY="24.0" mnemonicParsing="false" onAction="#openAppointmentsINFO" style="-fx-background-color: #F08080;" text="Appointments" textFill="WHITE" wrapText="true">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+            <effect>
+                <InnerShadow />
+            </effect></Button>
+        <Button fx:id="MainScreen" layoutX="748.0" layoutY="24.0" mnemonicParsing="false" onAction="#openMainScreen" style="-fx-background-color: #F08080;" text="Main" textFill="WHITE" wrapText="true">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+            <effect>
+                <InnerShadow />
+            </effect></Button>
+    </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</AnchorPane>

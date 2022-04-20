@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="306.0" prefWidth="935.0" style="-fx-background-color: #2F4F4F;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.customerPopup">
+   <children>
+      <TableView fx:id="customerTable" focusTraversable="false" layoutX="12.0" layoutY="21.0" prefHeight="204.0" prefWidth="906.0">
+         <columns>
+            <TableColumn fx:id="customerTableIDCol" prefWidth="76.0" text="ID" />
+            <TableColumn fx:id="customerTableNameCol" prefWidth="179.0" text="Name" />
+            <TableColumn fx:id="customerTableAddressCol" prefWidth="280.0" text="Address" />
+            <TableColumn fx:id="customerTableFirstLevelDivisionCol" prefWidth="78.0" text="Division ID" />
+            <TableColumn fx:id="customerTablePostalCodeCol" prefWidth="119.0" text="Postal Code" />
+            <TableColumn fx:id="customerTablePhoneCol" prefWidth="140.0" text="Phone" />
+         </columns>
+      </TableView>
+      <Button fx:id="CloseCustomerList" layoutX="394.0" layoutY="255.0" mnemonicParsing="false" onAction="#closeCustomerList" prefHeight="25.0" prefWidth="148.0" text="Close List" />
+   </children>
+</AnchorPane>

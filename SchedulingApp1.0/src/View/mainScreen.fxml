@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight= "600.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.mainScreen">
+    <AnchorPane prefHeight="600.0" prefWidth="1050.0" style="-fx-background-color: #2F4F4F;" VBox.vgrow="ALWAYS">
+       <children>
+           <TableView fx:id="customerTable" focusTraversable="false" layoutX="47.0" layoutY="161.0" prefHeight="204.0" prefWidth="962.0">
+               <columns>
+                   <TableColumn fx:id="customerTableIDCol" prefWidth="76.0" text="ID" />
+                   <TableColumn fx:id="customerTableNameCol" prefWidth="179.0" text="Name" />
+                   <TableColumn fx:id="customerTableAddressCol" prefWidth="193.0" text="Address" />
+                   <TableColumn fx:id="customerTableFirstLevelDivisionCol" prefWidth="165.0" text="Division ID" />
+                   <TableColumn fx:id="customerTablePostalCodeCol" prefWidth="119.0" text="Postal Code" />
+                   <TableColumn fx:id="customerTablePhoneCol" prefWidth="202.0" text="Phone" />
+               </columns>
+           </TableView>
+           <TabPane layoutX="47.0" layoutY="407.0" prefHeight="333.0" prefWidth="962.0" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                   <Tab fx:id="appTableAllTabButton" text="All">
+                       <content>
+                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                               <children>
+                                   <TableView fx:id="appAllTable" layoutX="4.0" layoutY="-1.0" prefHeight="197.0" prefWidth="962.0">
+                                       <columns>
+                                           <TableColumn fx:id="appAllTableAppointmentIDCol" prefWidth="98.0" text="Appointment_ID" />
+                                           <TableColumn fx:id="appAllTableTitleCol" prefWidth="68.0" text="Title" />
+                                           <TableColumn fx:id="appAllTableDescriptionCol" prefWidth="113.0" text="Description" />
+                                           <TableColumn fx:id="appAllTableLocationCol" prefWidth="127.0" text="Location" />
+                                           <TableColumn fx:id="appAllTableContactCol" prefWidth="52.0" text="Contact" />
+                                           <TableColumn fx:id="appAllTableTypeCol" prefWidth="103.0" text="Type" />
+                                           <TableColumn fx:id="appAllTableStartDateAndTimeCol" prefWidth="118.0" text="Start Date and Time" />
+                                           <TableColumn fx:id="appAllTableEndDateAndTimeCol" prefWidth="111.0" text="End Date and Time" />
+                                           <TableColumn fx:id="appAllTableCustomerIDCol" prefWidth="77.0" text="Customer_ID" />
+                                           <TableColumn fx:id="appAllTableUserIDCol" prefWidth="75.0" text="User_ID" />
+                                       </columns>
+                                   </TableView>
+                               </children>
+                           </AnchorPane>
+                       </content>
+                   </Tab>
+                   <Tab fx:id="appTableWeekTabButton" text="Week">
+                       <content>
+                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="198.0" prefWidth="880.0">
+                               <children>
+                                  <TableView fx:id="appWeekTable" focusTraversable="false" layoutX="-4.0" prefHeight="204.0" prefWidth="968.0">
+                                   <columns>
+                                       <TableColumn fx:id="appWeekTableAppointmentIDCol" prefWidth="98.0" text="Appointment_ID" />
+                                       <TableColumn fx:id="appWeekTableTitleCol" prefWidth="68.0" text="Title" />
+                                       <TableColumn fx:id="appWeekTableDescriptionCol" prefWidth="113.0" text="Description" />
+                                       <TableColumn fx:id="appWeekTableLocationCol" prefWidth="127.0" text="Location" />
+                                       <TableColumn fx:id="appWeekTableContactCol" prefWidth="52.0" text="Contact" />
+                                       <TableColumn fx:id="appWeekTableTypeCol" prefWidth="103.0" text="Type" />
+                                       <TableColumn fx:id="appWeekTableStartDateAndTimeCol" prefWidth="118.0" text="Start Date and Time" />
+                                       <TableColumn fx:id="appWeekTableEndDateAndTimeCol" prefWidth="111.0" text="End Date and Time" />
+                                       <TableColumn fx:id="appWeekTableCustomerIDCol" prefWidth="77.0" text="Customer_ID" />
+                                       <TableColumn fx:id="appWeekTableUserIDCol" prefWidth="75.0" text="User_ID" />
+                                   </columns>
+                               </TableView>
+                               </children>
+                           </AnchorPane>
+                       </content>
+                   </Tab>
+                   <Tab fx:id="appTableMonthTabButton" text="Month">
+                       <content>
+                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                               <children>
+                                   <TableView fx:id="appMonthTable" focusTraversable="false" layoutX="-1.0" prefHeight="195.0" prefWidth="962.0">
+                                       <columns>
+                                           <TableColumn fx:id="appMonthTableAppointmentIDCol" prefWidth="98.0" text="Appointment_ID" />
+                                           <TableColumn fx:id="appMonthTableTitleCol" prefWidth="68.0" text="Title" />
+                                           <TableColumn fx:id="appMonthTableDescriptionCol" prefWidth="113.0" text="Description" />
+                                           <TableColumn fx:id="appMonthTableLocationCol" prefWidth="126.0" text="Location" />
+                                           <TableColumn fx:id="appMonthTableContactCol" prefWidth="53.0" text="Contact" />
+                                           <TableColumn fx:id="appMonthTableTypeCol" prefWidth="103.0" text="Type" />
+                                           <TableColumn fx:id="appMonthTableStartDateAndTimeCol" prefWidth="117.0" text="Start Date and Time" />
+                                           <TableColumn fx:id="appMonthTableEndDateAndTimeCol" prefWidth="112.0" text="End Date and Time" />
+                                           <TableColumn fx:id="appMonthTableCustomerIDCol" prefWidth="77.0" text="Customer_ID" />
+                                           <TableColumn fx:id="appMonthTableUserIDCol" prefWidth="75.0" text="User_ID" />
+                                       </columns>
+                                   </TableView>
+                               </children>
+                           </AnchorPane>
+                       </content>
+                   </Tab>
+               </tabs>
+           </TabPane>
+          <Button fx:id="customersButton" layoutX="116.0" layoutY="36.0" mnemonicParsing="false" onAction="#openCustomerINFO" style="-fx-background-color: #F08080;" text="Customers" textFill="WHITE" wrapText="true">
+             <font>
+                <Font name="System Bold" size="18.0" />
+             </font>
+             <effect>
+                <InnerShadow />
+             </effect></Button>
+          <Button fx:id="appointmentsButton" layoutX="432.0" layoutY="36.0" mnemonicParsing="false" onAction="#openAppointmentsINFO" style="-fx-background-color: #F08080;" text="Appointments" textFill="WHITE" wrapText="true">
+             <font>
+                <Font name="System Bold" size="18.0" />
+             </font>
+             <effect>
+                <InnerShadow />
+             </effect></Button>
+          <Button fx:id="ReportScreen" layoutX="748.0" layoutY="36.0" mnemonicParsing="false" onAction="#openReportScreen" style="-fx-background-color: #F08080;" text="Reports" textFill="WHITE" wrapText="true">
+             <font>
+                <Font name="System Bold" size="18.0" />
+             </font>
+             <effect>
+                <InnerShadow />
+             </effect></Button>
+       </children>
+       <effect>
+          <InnerShadow />
+       </effect>
+    </AnchorPane>
+</VBox>

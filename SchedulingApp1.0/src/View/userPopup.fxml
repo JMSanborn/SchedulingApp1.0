@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controller.userPopup"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <TableView fx:id="userTable" focusTraversable="false" layoutX="12.0" layoutY="21.0" prefHeight="204.0" prefWidth="906.0">
+            <columns>
+                <TableColumn fx:id="userTableIDCol" prefWidth="76.0" text="ID" />
+                <TableColumn fx:id="userTableNameCol" prefWidth="179.0" text="Name" />
+            </columns>
+        </TableView>
+        <Button fx:id="CloseUserList" layoutX="394.0" layoutY="255.0" mnemonicParsing="false" onAction="#closeUserList" prefHeight="25.0" prefWidth="148.0" text="Close List" />
+    </children>
+</AnchorPane>

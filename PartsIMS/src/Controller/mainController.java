@@ -22,7 +22,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class mainController implements Initializable {
+public class mainController  {
 
 
     public Button partAdd;
@@ -242,7 +242,7 @@ public class mainController implements Initializable {
         productsTable.setItems(inventory.getAllProducts());
     }
 
-    @Override
+    //@Override
     public void initialize (URL url, ResourceBundle resourceBundle){
 
         partId.setCellValueFactory(new PropertyValueFactory<>("id"));

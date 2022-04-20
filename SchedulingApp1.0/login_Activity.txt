@@ -1,0 +1,17 @@
+2022-01-14T05:04:23.263142100-07:00[America/Phoenix] User: test Login_Attempt:  Success
+2022-01-14T05:05:31.739806900-07:00[America/Phoenix] User: test Login_Attempt:  Success
+2022-01-16T07:07:53.082862300-07:00[America/Phoenix] User: test Login_Attempt:  Success
+2022-01-16T08:07:30.533793100-07:00[America/Phoenix] User: test Login_Attempt:  Success
+2022-01-16T08:09:51.131722700-07:00[America/Phoenix] User: test Login_Attempt:  Success
+2022-01-16T08:11:26.389479900-07:00[America/Phoenix] User: test Login_Attempt:  Success
+2022-01-16T08:19:59.699012900-07:00[America/Phoenix] User: test Login_Attempt:  Success
+2022-01-16T08:22:07.108640-07:00[America/Phoenix] User: test Login_Attempt:  Success
+2022-01-16T08:23:47.210115100-07:00[America/Phoenix] User: test Login_Attempt:  Success
+2022-04-07T13:11:28.455415200-07:00[America/Phoenix] User: admin Login_Attempt:  Success
+2022-04-08T11:45:06.318603700-07:00[America/Phoenix] User: admin Login_Attempt:  Success
+2022-04-08T11:56:53.447838300-07:00[America/Phoenix] User: admin Login_Attempt:  Success
+2022-04-18T10:38:37.111677-07:00[America/Phoenix] User: admin Login_Attempt:  Success
+2022-04-18T10:39:33.189780400-07:00[America/Phoenix] User: admin Login_Attempt:  Success
+2022-04-18T12:56:41.370814800-07:00[America/Phoenix] User: admin Login_Attempt:  Success
+2022-04-19T13:11:01.584591100-07:00[America/Phoenix] User: admin Login_Attempt:  Success
+2022-04-19T13:43:16.225579400-07:00[America/Phoenix] User: admin Login_Attempt:  Success

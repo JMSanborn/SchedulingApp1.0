@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.customerScreen">
+    <AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #2F4F4F;">
+        <children>
+          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3a7e6b" height="211.0" layoutX="33.0" layoutY="379.0" stroke="BLACK" strokeType="INSIDE" width="623.0">
+            <effect>
+                <DropShadow />
+            </effect>
+            </Rectangle>
+            <TableView fx:id="customerTable" focusTraversable="false" layoutX="31.0" layoutY="158.0" onMouseClicked="#customerInfoToInputBoxes" prefHeight="204.0" prefWidth="837.0">
+                <columns>
+                    <TableColumn fx:id="customerTableIDCol" prefWidth="76.0" text="ID" />
+                    <TableColumn fx:id="customerTableNameCol" prefWidth="179.0" text="Name" />
+                    <TableColumn fx:id="customerTableAddressCol" prefWidth="269.0" text="Address" />
+                    <TableColumn fx:id="customerTableFirstLevelDivisionCol" prefWidth="68.0" text="Division ID" />
+                    <TableColumn fx:id="customerTablePostalCodeCol" prefWidth="97.0" text="Postal Code" />
+                    <TableColumn fx:id="customerTablePhoneCol" prefWidth="138.0" text="Phone" />
+                </columns>
+            </TableView>
+            <Button fx:id="customerAddButton" focusTraversable="false" layoutX="713.0" layoutY="426.0" mnemonicParsing="false" onAction="#addCustomerInfo" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: #F08080;" text="Add Customer" textFill="WHITE">
+             <effect>
+                <InnerShadow />
+             </effect></Button>
+            <Button fx:id="customerUpdateButton" disable="true" layoutX="713.0" layoutY="462.0" mnemonicParsing="false" onAction="#updateCustomerInfo" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: #F08080;" text="Update Customer" textFill="WHITE">
+             <effect>
+                <InnerShadow />
+             </effect></Button>
+            <Button fx:id="customerDeleteButton" disable="true" layoutX="713.0" layoutY="499.0" mnemonicParsing="false" onAction="#deleteCustomerInfo" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: #F08080;" text="Delete Customer" textFill="WHITE">
+             <effect>
+                <InnerShadow />
+             </effect></Button>
+            <TextField fx:id="customerNameTextField" focusTraversable="false" layoutX="170.0" layoutY="418.0" prefHeight="25.0" prefWidth="170.0" promptText="enter name" />
+            <TextField fx:id="customerAddressTextField" focusTraversable="false" layoutX="466.0" layoutY="418.0" prefHeight="25.0" prefWidth="170.0" promptText="enter address" />
+            <TextField fx:id="customerPostalCodeTextField" focusTraversable="false" layoutX="466.0" layoutY="454.0" prefHeight="25.0" prefWidth="170.0" promptText="enter postal code" />
+            <TextField fx:id="customerPhoneNumberTextField" focusTraversable="false" layoutX="170.0" layoutY="454.0" prefHeight="25.0" prefWidth="170.0" promptText="enter phone number" />
+            <Label layoutX="411.0" layoutY="422.0" text="Address:" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Label>
+            <Label layoutX="390.0" layoutY="458.0" text="Postal Code:" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Label>
+            <Label layoutX="69.0" layoutY="458.0" text="Phone Number:" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Label>
+            <Label layoutX="150.0" layoutY="533.0" text="ID:" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Label>
+            <TextField fx:id="customerIDTextField" disable="true" focusTraversable="false" layoutX="170.0" layoutY="529.0" prefHeight="25.0" prefWidth="170.0" promptText="auto-generated" />
+            <ComboBox fx:id="customerFirstLevelDivisionComboBox" focusTraversable="false" layoutX="170.0" layoutY="491.0" prefHeight="25.0" prefWidth="170.0" promptText="select first-level division" />
+            <ComboBox fx:id="customerCountryComboBox" focusTraversable="false" layoutX="466.0" layoutY="491.0" onAction="#firstLevelDivisionComboBox" prefHeight="25.0" prefWidth="170.0" promptText="select country" />
+            <Label layoutX="50.0" layoutY="495.0" text="First-Level Division:" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Label>
+            <Label layoutX="407.0" layoutY="495.0" prefHeight="17.0" prefWidth="56.0" text="Country:" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Label>
+            <Label layoutX="119.0" layoutY="422.0" text="Name: " textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Label>
+            <Button fx:id="customerResetButton" disable="true" layoutX="713.0" layoutY="542.0" mnemonicParsing="false" onAction="#resetInputBoxes" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: #F08080;" text="Reset Form" textFill="WHITE" wrapText="true">
+             <effect>
+                <InnerShadow />
+             </effect></Button>
+            <Label layoutX="32.0" layoutY="115.0" text="Customer Information:" textFill="WHITE">
+                <font>
+                    <Font name="Century Gothic" size="18.0" />
+                </font>
+            </Label>
+
+          <Button fx:id="mainScreenButton" layoutX="119.0" layoutY="51.0" mnemonicParsing="false" onAction="#openMainScreen" style="-fx-background-color: #F08080;" text="Main Screen" textFill="WHITE">
+             <font>
+                <Font name="System Bold" size="18.0" />
+             </font>
+             <effect>
+                <InnerShadow />
+             </effect></Button>
+          <Button fx:id="appointmentsScrennButton" layoutX="387.0" layoutY="51.0" mnemonicParsing="false" onAction="#openAppointmentScreen" style="-fx-background-color: #F08080;" text="Appointments" textFill="WHITE">
+             <font>
+                <Font name="System Bold" size="18.0" />
+             </font>
+             <effect>
+                <InnerShadow />
+             </effect></Button>
+          <Button fx:id="ReportScreen" layoutX="724.0" layoutY="51.0" mnemonicParsing="false" onAction="#openReportScreen" style="-fx-background-color: #F08080;" text="Reports" textFill="WHITE">
+             <font>
+                <Font name="System Bold" size="18.0" />
+             </font>
+             <effect>
+                <InnerShadow />
+             </effect></Button>
+        </children>
+       <effect>
+          <InnerShadow />
+       </effect>
+    </AnchorPane>
+</VBox>

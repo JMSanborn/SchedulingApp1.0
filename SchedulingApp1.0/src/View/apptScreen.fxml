@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="825.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.apptScreen">
+   <children>
+      <AnchorPane prefHeight="825.0" prefWidth="1050.0" style="-fx-background-color: #2F4F4F;" VBox.vgrow="ALWAYS">
+          <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3a7e6b" height="406.0" layoutX="26.0" layoutY="381.0" stroke="BLACK" strokeType="INSIDE" width="694.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Rectangle>
+              <Button fx:id="addAppointmentButton" focusTraversable="false" layoutX="751.0" layoutY="485.0" mnemonicParsing="false" onAction="#addAppointmentInfo" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #F08080;" text="Add Appointment" textFill="WHITE">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+              <Button fx:id="updateAppointmentButton" disable="true" focusTraversable="false" layoutX="751.0" layoutY="530.0" mnemonicParsing="false" onAction="#updateAppointmentInfo" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #F08080;" text="Update Appointment" textFill="WHITE">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+              <Button fx:id="deleteAppointmentButton" disable="true" focusTraversable="false" layoutX="751.0" layoutY="574.0" mnemonicParsing="false" onAction="#deleteAppointmentInfo" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #F08080;" text="Delete Appointment" textFill="WHITE">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+              <Label layoutX="751.0" layoutY="428.0" prefHeight="21.0" prefWidth="149.0" text="Appointment Options" textFill="WHITE">
+                  <font>
+                      <Font size="15.0" />
+                  </font>
+              </Label>
+              <TextField fx:id="appointmentTitleTextField" focusTraversable="false" layoutX="133.0" layoutY="521.0" prefHeight="25.0" prefWidth="213.0" promptText="enter title" />
+              <TextField fx:id="appointmentDescriptionTextField" focusTraversable="false" layoutX="133.0" layoutY="565.0" prefHeight="25.0" prefWidth="213.0" promptText="enter description" />
+              <TextField fx:id="appointmentLocationTextField" focusTraversable="false" layoutX="133.0" layoutY="609.0" prefHeight="25.0" prefWidth="213.0" promptText="enter location" />
+              <TextField fx:id="appointmentIDTextField" disable="true" focusTraversable="false" layoutX="133.0" layoutY="476.0" prefHeight="25.0" prefWidth="213.0" promptText="auto-generated" />
+              <TextField fx:id="appointmentTypeTextField" focusTraversable="false" layoutX="486.0" layoutY="685.0" prefHeight="25.0" prefWidth="213.0" promptText="enter type" />
+              <TextField fx:id="appointmentUserIDTextField" focusTraversable="false" layoutX="489.0" layoutY="476.0" prefHeight="25.0" prefWidth="213.0" promptText="enter user ID" />
+              <Label layoutX="34.0" layoutY="480.0" text="Appointment_ID:" textFill="WHITE" />
+              <Label layoutX="97.0" layoutY="525.0" text="Title:" textFill="WHITE" />
+              <Label layoutX="60.0" layoutY="573.0" text="Description:" textFill="WHITE" />
+              <Label layoutX="73.0" layoutY="618.0" text="Location:" textFill="WHITE" />
+              <Label layoutX="76.0" layoutY="658.0" text="Contact:" textFill="WHITE" />
+              <Label layoutX="447.0" layoutY="689.0" text="Type:" textFill="WHITE" />
+              <Label layoutX="370.0" layoutY="613.0" text="Start Date and Time:" textFill="WHITE" />
+              <Label layoutX="372.0" layoutY="649.0" text="End Date and Time:" textFill="WHITE" />
+              <Label layoutX="410.0" layoutY="525.0" text="Customer_ID:" textFill="WHITE" />
+              <Label layoutX="439.0" layoutY="480.0" text="User_ID:" textFill="WHITE" />
+              <TabPane layoutX="26.0" layoutY="134.0" prefHeight="211.0" prefWidth="959.0" tabClosingPolicy="UNAVAILABLE">
+                  <tabs>
+                      <Tab fx:id="appTableViewAllTabButton" text="All">
+                          <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                  <children>
+                                      <TableView fx:id="appAllTable" layoutY="-3.0" onMouseClicked="#appointmentInfoToInputBoxes" prefHeight="199.0" prefWidth="959.0">
+                                          <columns>
+                                              <TableColumn fx:id="appAllTableAppointmentIDCol" prefWidth="98.0" text="Appointment_ID" />
+                                              <TableColumn fx:id="appAllTableTitleCol" prefWidth="68.0" text="Title" />
+                                              <TableColumn fx:id="appAllTableDescriptionCol" prefWidth="113.0" text="Description" />
+                                              <TableColumn fx:id="appAllTableLocationCol" prefWidth="127.0" text="Location" />
+                                              <TableColumn fx:id="appAllTableContactCol" prefWidth="52.0" text="Contact" />
+                                              <TableColumn fx:id="appAllTableTypeCol" prefWidth="103.0" text="Type" />
+                                              <TableColumn fx:id="appAllTableStartDateAndTimeCol" prefWidth="118.0" text="Start Date and Time" />
+                                              <TableColumn fx:id="appAllTableEndDateAndTimeCol" prefWidth="111.0" text="End Date and Time" />
+                                              <TableColumn fx:id="appAllTableCustomerIDCol" prefWidth="77.0" text="Customer_ID" />
+                                              <TableColumn fx:id="appAllTableUserIDCol" prefWidth="75.0" text="User_ID" />
+                                          </columns>
+                                      </TableView>
+                                  </children>
+                              </AnchorPane>
+                          </content>
+                      </Tab>
+                      <Tab fx:id="appTableViewWeekTabButton" text="Week">
+                          <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                  <children>
+                                      <TableView fx:id="appWeekTable" layoutY="-1.0" onMouseClicked="#appointmentInfoToInputBoxes" prefHeight="184.0" prefWidth="960.0">
+                                          <columns>
+                                              <TableColumn fx:id="appWeekTableAppointmentIDCol" prefWidth="99.0" text="Appointment_ID" />
+                                              <TableColumn fx:id="appWeekTableTitleCol" prefWidth="67.0" text="Title" />
+                                              <TableColumn fx:id="appWeekTableDescriptionCol" prefWidth="113.0" text="Description" />
+                                              <TableColumn fx:id="appWeekTableLocationCol" prefWidth="127.0" text="Location" />
+                                              <TableColumn fx:id="appWeekTableContactCol" prefWidth="52.0" text="Contact" />
+                                              <TableColumn fx:id="appWeekTableTypeCol" prefWidth="103.0" text="Type" />
+                                              <TableColumn fx:id="appWeekTableStartDateAndTimeCol" prefWidth="118.0" text="Start Date and Time" />
+                                              <TableColumn fx:id="appWeekTableEndDateAndTimeCol" prefWidth="115.0" text="End Date and Time" />
+                                              <TableColumn fx:id="appWeekTableCustomerIDCol" prefWidth="92.0" text="Customer_ID" />
+                                              <TableColumn fx:id="appWeekTableUserIDCol" prefWidth="75.0" text="User_ID" />
+                                          </columns>
+                                      </TableView>
+                                  </children>
+                              </AnchorPane>
+                          </content>
+                      </Tab>
+                      <Tab fx:id="appTableMonthTabButton" text="Month">
+                          <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                  <children>
+                                      <TableView fx:id="appMonthTable" focusTraversable="false" layoutY="-2.0" onMouseClicked="#appointmentInfoToInputBoxes" prefHeight="197.0" prefWidth="959.0">
+                                          <columns>
+                                              <TableColumn fx:id="appMonthTableAppointmentIDCol" prefWidth="98.0" text="Appointment_ID" />
+                                              <TableColumn fx:id="appMonthTableTitleCol" prefWidth="68.0" text="Title" />
+                                              <TableColumn fx:id="appMonthTableDescriptionCol" prefWidth="113.0" text="Description" />
+                                              <TableColumn fx:id="appMonthTableLocationCol" prefWidth="126.0" text="Location" />
+                                              <TableColumn fx:id="appMonthTableContactCol" prefWidth="53.0" text="Contact" />
+                                              <TableColumn fx:id="appMonthTableTypeCol" prefWidth="103.0" text="Type" />
+                                              <TableColumn fx:id="appMonthTableStartDateAndTimeCol" prefWidth="117.0" text="Start Date and Time" />
+                                              <TableColumn fx:id="appMonthTableEndDateAndTimeCol" prefWidth="112.0" text="End Date and Time" />
+                                              <TableColumn fx:id="appMonthTableCustomerIDCol" prefWidth="77.0" text="Customer_ID" />
+                                              <TableColumn fx:id="appMonthTableUserIDCol" prefWidth="75.0" text="User_ID" />
+                                          </columns>
+                                      </TableView>
+                                  </children>
+                              </AnchorPane>
+                          </content>
+                      </Tab>
+                  </tabs>
+              </TabPane>
+              <Button fx:id="resetAppointmentButton" disable="true" focusTraversable="false" layoutX="751.0" layoutY="614.0" mnemonicParsing="false" onAction="#resetInputBoxes" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #F08080;" text="Reset Appointment Data" textFill="WHITE">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+              <Label layoutX="287.0" layoutY="398.0" text="Appointment Data :" textFill="WHITE">
+                  <font>
+                      <Font size="20.0" />
+                  </font>
+              </Label>
+              <DatePicker fx:id="appointmentStartDatePicker" layoutX="489.0" layoutY="609.0" prefHeight="25.0" prefWidth="103.0" promptText="select date" />
+              <ComboBox fx:id="appointmentStartTimeComboBox" layoutX="599.0" layoutY="609.0" prefHeight="25.0" prefWidth="103.0" promptText="select time" />
+              <DatePicker fx:id="appointmentEndDatePicker" layoutX="489.0" layoutY="645.0" prefHeight="25.0" prefWidth="103.0" promptText="select date" />
+              <ComboBox fx:id="appointmentEndTimeComboBox" layoutX="599.0" layoutY="645.0" prefHeight="25.0" prefWidth="103.0" promptText="select time" />
+              <TextField fx:id="appointmentCustomerIDTextField" focusTraversable="false" layoutX="489.0" layoutY="521.0" prefHeight="25.0" prefWidth="213.0" promptText="enter customer ID" />
+            <Button fx:id="MainScreenButton" layoutX="66.0" layoutY="50.0" mnemonicParsing="false" onAction="#openMainScreen" style="-fx-background-color: #F08080;" text=" Main Screen" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <Button fx:id="CustomerScreenButton" layoutX="414.0" layoutY="50.0" mnemonicParsing="false" onAction="#openCustomerScreen" style="-fx-background-color: #F08080;" text="Customer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <Button fx:id="ReportScreen" layoutX="751.0" layoutY="50.0" mnemonicParsing="false" onAction="#openReportScreen" style="-fx-background-color: #F08080;" text="Reports" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <Button fx:id="customerListPopUp" layoutX="59.0" layoutY="739.0" mnemonicParsing="false" onAction="#newAction" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #F08080;" text="Customer List" textFill="WHITE">
+              <effect>
+                  <InnerShadow />
+              </effect>
+            </Button>
+            <Button fx:id="userListPopUp" layoutX="300.0" layoutY="739.0" mnemonicParsing="false" onAction="#openUserList" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #F08080;" text="User List" textFill="WHITE">
+              <effect>
+                  <InnerShadow />
+              </effect>
+          </Button>
+            <Button fx:id="contactListPopUp" layoutX="541.0" layoutY="739.0" mnemonicParsing="false" onAction="#openContactList" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #F08080;" text="Contact List" textFill="WHITE">
+                <effect>
+                    <InnerShadow />
+                </effect>
+            </Button>
+            <ComboBox fx:id="appointmentContactComboBox" focusTraversable="false" layoutX="133.0" layoutY="654.0" prefWidth="150.0" promptText="select contact name" />
+            <Label fx:id="currentTimeZone" layoutX="173.0" layoutY="430.0" prefHeight="17.0" prefWidth="441.0" text="Local Time" textFill="WHITE" />
+            <Label fx:id="eSTTime" layoutX="172.0" layoutY="449.0" prefHeight="17.0" prefWidth="441.0" text="Eastern Time" textFill="WHITE" />
+            <Label layoutX="379.0" layoutY="555.0" prefHeight="39.0" prefWidth="323.0" text="Appointments are shown in local time zone and converted to Eastern Standard upon submittal" textFill="WHITE" wrapText="true" />
+          </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</VBox>
