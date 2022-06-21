@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.mainController">
+   <children>
+      <Button fx:id="makeCoffee" layoutX="221.0" layoutY="286.0" mnemonicParsing="false" onAction="#OnMakeCoffee" text="Make Coffee" />
+      <TextField fx:id="coffeeAmount" layoutX="59.0" layoutY="69.0" promptText="Enter Coffee Amount" />
+      <Label layoutX="65.0" layoutY="33.0" text="How much coffee would you like to make?" />
+      <TextArea fx:id="coffeeCup" layoutX="380.0" layoutY="186.0" prefHeight="200.0" prefWidth="200.0" promptText="Coffee Cup" />
+   </children>
+</AnchorPane>
