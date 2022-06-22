@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="38c041a3-19eb-46ba-9866-b21175338d78" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../CoffeePot/src/Model/ReaderThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/javafx_fxml.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/javafx_sdk_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StreamPipeTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/FXMLDocumentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main/JavaFXConsoleTextArea.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/ReaderThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View/FXMLDocument.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CoffeePot/src/Controller/mainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CoffeePot/src/Controller/mainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CoffeePot/src/Main/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CoffeePot/src/Main/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CoffeePot/src/Model/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CoffeePot/src/Model/Helper.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2AwAOXiD5hc3vn1XmZoNVgAgOtE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PATH_TO_FX$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager">
+    <configuration name="StreamPipeTest" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main.JavaFXConsoleTextArea" />
+      <module name="StreamPipeTest" />
+      <option name="VM_PARAMETERS" value="--module-path ${PATH_TO_FX} --add-modules javafx.fxml,javafx.controls,javafx.graphics" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="38c041a3-19eb-46ba-9866-b21175338d78" name="Changes" comment="" />
+      <created>1655910245356</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1655910245356</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

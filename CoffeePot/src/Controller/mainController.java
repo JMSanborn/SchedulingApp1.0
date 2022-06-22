@@ -1,20 +1,26 @@
 package Controller;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-
+mport java.util.Timer;
+import java.util.TimerTask;
 import java.io.OutputStream;
+import java.net.URL;
+import java.util.ResourceBundle;
 import java.util.Scanner;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class mainController {
+public class mainController implements Initializable {
 
     public Button makeCoffee;
     public TextField coffeeAmount;
     public TextArea coffeeCup;
     static Timer timer;
     static int interval;
+    private TextArea textAreaUI;
+    public static TextArea staticTxtArea;
 
     public void OnMakeCoffee(ActionEvent actionEvent) throws Exception {
         if (coffeeAmount.getText().isEmpty()) {
@@ -25,27 +31,14 @@ public class mainController {
         alert.setHeaderText("Please verify all field have been completed.");
         alert.showAndWait();
     }
-        else{
-        Scanner sc = new Scanner(System.in);
-        if (coffeeAmount.getText().isEmpty()
-        String secs = sc.nextLine();
-        int delay = 1000;
-        int period = 1000;
-        timer = new Timer();
-        interval = Integer.parseInt(secs);
-        System.out.println(secs);
-        timer.scheduleAtFixedRate(new TimerTask() {
+        else {
+            System.err.println("@@@@ERROR: This is error");
+            System.out.println("####OUTPUT : THIS IS ERROR");
+        }
+}
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
 
-            public void run() {
-                System.out.println(setInterval());
-
-            }
-        }, delay, period);
-    }
-
-    private static final int setInterval() {
-        if (interval == 1)
-            timer.cancel();
-        return --interval;
+        staticTxtArea = coffeeCup;
     }
 }
