@@ -2,24 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38c041a3-19eb-46ba-9866-b21175338d78" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../CoffeePot/src/Model/ReaderThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javafx_fxml.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javafx_sdk_11_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StreamPipeTest.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/FXMLDocumentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/JavaFXConsoleTextArea.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/ReaderThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/FXMLDocument.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CoffeePot/out/production/CoffeePot/Controller/mainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CoffeePot/out/production/CoffeePot/Controller/mainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CoffeePot/out/production/CoffeePot/Main/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CoffeePot/out/production/CoffeePot/Main/main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CoffeePot/src/Controller/mainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CoffeePot/src/Controller/mainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CoffeePot/src/Main/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CoffeePot/src/Main/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CoffeePot/src/Model/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CoffeePot/src/Model/Helper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/FXMLDocumentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FXMLDocumentController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,9 +62,19 @@
       <option name="presentableId" value="Default" />
       <updated>1655910245356</updated>
     </task>
+    <task id="LOCAL-00001" summary="First Commit">
+      <created>1655918410439</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1655918410439</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="First Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Commit" />
   </component>
 </project>

@@ -35,15 +35,15 @@ public class main extends Application {
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/View/main.fxml"));
         primaryStage.setTitle("CoffeePot");
-        primaryStage.setScene(new Scene(root, 500, 525));
+        primaryStage.setScene(new Scene(root, 1000, 500));
         primaryStage.show();
 
         txtArea = mainController.staticTxtArea;
 
-        //Thread execution for reading output stream
+            //Thread execution for reading output stream
         executeReaderThreads();
 
-        //Thread closing on stag close event
+            //Thread closing on stag close event
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent e) {

@@ -8,6 +8,7 @@
       <Button fx:id="makeCoffee" layoutX="221.0" layoutY="286.0" mnemonicParsing="false" onAction="#OnMakeCoffee" text="Make Coffee" />
       <TextField fx:id="coffeeAmount" layoutX="59.0" layoutY="69.0" promptText="Enter Coffee Amount" />
       <Label layoutX="65.0" layoutY="33.0" text="How much coffee would you like to make?" />
-      <TextArea fx:id="coffeeCup" layoutX="380.0" layoutY="186.0" prefHeight="200.0" prefWidth="200.0" promptText="Coffee Cup" />
+      <TextArea fx:id="coffeeCup" layoutX="380.0" layoutY="186.0" prefHeight="200.0" prefWidth="600.0" promptText="Coffee Cup" />
+      <ProgressBar fx:id="coffeeBar" layoutX="59.0" layoutY="118.0" prefWidth="200.0" progress="0.0" />
    </children>
 </AnchorPane>
