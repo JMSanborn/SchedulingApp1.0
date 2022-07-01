@@ -6,6 +6,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
@@ -34,13 +35,12 @@ public class main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/View/main.fxml"));
-        primaryStage.setTitle("CoffeePot");
-        primaryStage.setScene(new Scene(root, 1000, 500));
+        primaryStage.setTitle("Jet Fuel");
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
 
         txtArea = mainController.staticTxtArea;
-
-            //Thread execution for reading output stream
+                    //Thread execution for reading output stream
         executeReaderThreads();
 
             //Thread closing on stag close event
