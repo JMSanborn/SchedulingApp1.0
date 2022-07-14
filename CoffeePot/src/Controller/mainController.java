@@ -1,20 +1,15 @@
 package Controller;
 
 import javafx.application.Platform;
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleIntegerProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseButton;
-import javafx.scene.layout.StackPane;
+import javafx.scene.input.KeyCode;
 import javafx.scene.robot.Robot;
 
-import java.awt.*;
-import java.awt.event.KeyEvent;
 import java.util.*;
 import java.net.URL;
 
@@ -25,13 +20,13 @@ public class mainController implements Initializable {
     public TextField coffeeAmount;
     public TextArea coffeeCup;
     static Timer timer;
-    static int interval;
+    static double interval;
     public ProgressBar progressBar;
+    public TextField progressText;
     private TextArea textAreaUI;
     public static TextArea staticTxtArea;
     double progress;
-
-
+    double percent;
 
 
     public void OnMakeCoffee(ActionEvent actionEvent) throws Exception {
@@ -42,43 +37,43 @@ public class mainController implements Initializable {
             alert.setHeaderText("Please verify all field have been completed.");
             alert.showAndWait();
         } else {
-            progressBar.setProgress(1);
             timer = new Timer();
             String text = coffeeAmount.getText();
-            interval = Integer.parseInt(text);
+            interval = Double.parseDouble(text);
+            percent = (1/interval);
             timer.scheduleAtFixedRate(new TimerTask() {
                 public void run() {
-                    System.out.println(setInterval() + (" Minutes of fuel left!"));
+                    progressText.setText(setInterval() + (" cups of coffee left!"));
                     increaseProgress();
                     Platform.runLater(() -> {
-                        Robot robot = new Robot();
-                        robot.mouseMove(10, 20);
-                        //robot.mousePress(MouseButton.PRIMARY);
-                        //robot.mouseRelease(MouseButton.PRIMARY);
-                        robot.mouseMove(-20, -10);
-                        //robot.mousePress(MouseButton.PRIMARY);
-                        //robot.mouseRelease(MouseButton.PRIMARY);
+                        keyStroke();
                     });
                 }
-            }, 0, 60*10);
+            }, 0, 60*1000);
         }
     }
 
-    private static final int setInterval () {
+    private static final Double setInterval () {
         if (interval == 1)
             timer.cancel();
         return --interval;
     }
 
-    public void increaseProgress(){
-        progress += 0.1;
+    public void increaseProgress() {
+        progress = progress + percent;
         progressBar.setProgress(progress);
     }
 
+    public void keyStroke(){
+        coffeeCup.requestFocus();
+        Robot robot = new Robot();
+            robot.keyPress(KeyCode.D);
+            robot.keyRelease(KeyCode.D);
+            System.out.println("rip");
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        progressBar.setStyle("-fx-accent: #ADFF2F;");
-        progressBar.setProgress(1);
+        progressBar.setStyle("-fx-accent: #DEB887;");
         staticTxtArea = coffeeCup;
     }
 

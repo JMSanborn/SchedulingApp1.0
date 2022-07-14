@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextArea;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
@@ -35,7 +36,8 @@ public class main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/View/main.fxml"));
-        primaryStage.setTitle("Jet Fuel");
+        primaryStage.setTitle("Coffee Maker");
+        primaryStage.getIcons().add(new Image(("file:Icon.png")));
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
 

@@ -93,7 +93,7 @@ public class ReaderThread implements Runnable{
             }
             catch (InterruptedException ie) {
             }
-            System.out.println("Console Started Successfully>");
+            System.out.println("Coffee Maker Started Successfully>");
 
         }
     }

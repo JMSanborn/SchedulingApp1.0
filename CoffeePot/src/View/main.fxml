@@ -5,21 +5,30 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox prefHeight="400.0" prefWidth="385.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.mainController">
+<VBox prefHeight="484.0" prefWidth="376.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.mainController">
    <children>
-      <AnchorPane prefHeight="400.0" prefWidth="385.0" style="-fx-background-color: #A9A9A9;" VBox.vgrow="ALWAYS">
+      <AnchorPane prefHeight="456.0" prefWidth="410.0" style="-fx-background-color: #FFEBCD;" VBox.vgrow="ALWAYS">
       <children>
-         <Button fx:id="makeCoffee" layoutX="232.0" layoutY="69.0" mnemonicParsing="false" onAction="#OnMakeCoffee" style="-fx-background-color: #ADFF2F;" text="Add Fuel" textFill="BLACK">
+         <Button fx:id="makeCoffee" layoutX="232.0" layoutY="69.0" mnemonicParsing="false" onAction="#OnMakeCoffee" style="-fx-background-color: #FA8072;" text="Make Coffee" textFill="BLACK">
                <effect>
                   <InnerShadow />
                </effect></Button>
-         <TextField fx:id="coffeeAmount" layoutX="59.0" layoutY="69.0" promptText="Enter Fuel Amount" />
-         <Label layoutX="65.0" layoutY="33.0" text="How much fuel would you like to add?" />
-         <TextArea fx:id="coffeeCup" layoutX="59.0" layoutY="157.0" prefHeight="200.0" prefWidth="258.0" promptText="Coffee Cup" style="-fx-control-inner-background:#000000; -fx-text-fill: #008000; ">
+         <TextField fx:id="coffeeAmount" layoutX="59.0" layoutY="69.0" promptText="Enter Minutes" />
+         <Label layoutX="65.0" layoutY="33.0" style="-fx-text-fill: #A52A2A;" text="How long would you like to stay awake?" >
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         </Label>
+         <TextArea fx:id="coffeeCup" layoutX="59.0" layoutY="196.0" prefHeight="246.0" prefWidth="258.0" promptText="Coffee Cup" style="-fx-control-inner-background:#FFE4B5; -fx-text-fill: #FA8072; ">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></TextArea>
-         <ProgressBar fx:id="progressBar" layoutX="59.0" layoutY="118.0" prefHeight="18.0" prefWidth="258.0" />
+         <ProgressBar fx:id="progressBar" layoutX="59.0" layoutY="118.0" prefHeight="18.0" prefWidth="258.0" progress="0.0" />
+            <TextField fx:id="progressText" layoutX="59.0" layoutY="149.0" prefHeight="33.0" prefWidth="258.0" style="-fx-control-inner-background:#FFE4B5; -fx-text-fill: #FA8072; ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </TextField>
       </children>
       </AnchorPane>
    </children>
